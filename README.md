@@ -8,13 +8,12 @@
 
 
 ~~~javascript
-function remove(interval){
+setInterval(() => {
     const cafe_document = document.getElementById('cafe_main').contentWindow.document;
     const cafe_window = document.getElementById('cafe_main').contentWindow.window;
     cafe_window.confirm = () => true;
     cafe_document.getElementById('chk_all').click();
     cafe_document.getElementsByClassName('BaseButton BaseButton--skinGray size_default')[0].click();
-};
-setInterval(remove, 5000);
+}, 5000);
 //5000자리에 적당한 숫자를 ms 단위로 입력해주세요. 너무 짧게하면 차단당합니다. 
 ~~~
